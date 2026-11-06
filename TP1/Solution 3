@@ -1,0 +1,25 @@
+def celsius_to_fahrenheit(celsius, round_to=1):
+    temp = celsius*9/5 + 32
+    return temp
+calculated_temp = celsius_to_fahrenheit(45)
+print(f"Result= {calculated_temp} F")
+
+def fahrenheit_to_celsius(fahrenheit, round_to=2):
+    temp1 = (fahrenheit-32)*5/9
+    return temp1
+calculated_temp1 = fahrenheit_to_celsius(113)
+print(f"Result= {calculated_temp1} C")
+print('\nA. Print the conversion table below.')
+print("  °C  |   °F")
+print("------+-------")
+for c in range(0, 101, 20):
+    print(f"{c:5} | {celsius_to_fahrenheit(c):6}")
+
+print('\nB. Convert 98.6 °F to Celsius.')
+print("98.6 °F =", fahrenheit_to_celsius(98.6), "°C")
+
+print('\nC. Convert 37 °C to Fahrenheit and back again')
+print("Round trip 37 °C:", fahrenheit_to_celsius(celsius_to_fahrenheit(37)))
+
+print('\nD. Call one function with round_to=3')
+print(f"Precision call: {fahrenheit_to_celsius(98.6, round_to=3)}")

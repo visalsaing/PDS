@@ -1,0 +1,27 @@
+name = "Sok Dara"
+age = '20'
+major = 'Data Science'
+gpa = 2.5
+is_scholar = True 
+
+print('\nA. Print a profile card')
+
+print('Name: ', name)
+print('Age: ', age)
+print('Major: ', major)
+print('GPA: ', gpa)
+print('Scholar: ', is_scholar)
+
+print('\nB. Print every value followed by the name of its type')
+
+print('Name type: ', type(name))
+print('Age type: ', type(age))
+print('Major type: ', type(major))
+print('GPA type: ', type(gpa))
+print('Scholar type: ', type(is_scholar))
+
+print('\nC. Re-assign age')
+
+age = "28"
+
+print('Age type: ', type(age))

@@ -1,0 +1,28 @@
+print('\nA. Predict the result of each expression')
+print(' int("7") + 3.5 = 10\n str(10) * 3 = 30\n bool(""), bool(" ") : None\n int(3.99) = 3\n float("1e3") : error\n ')
+
+print('\nB. Write a function safe_int(text) that turns a string into an int')
+def safe_int(text):
+    """Turn text into an int; return None when it is not a number."""
+    text = text.strip()                    #strip use for cutting space
+    if text.lstrip("-").isdigit():         #lstrip=left strip # "42" or "-42"
+        return int(text)
+    try:
+        return int(float(text))            # "3.9" -> 3
+    except ValueError:
+        return None                        # "abc", "", "12a"
+
+for sample in ["42", " -8 ", "3.9", "abc", ""]:
+    print(repr(sample), "->", safe_int(sample))
+
+print('\nC. Ask user to input 2 numbers')
+input1 = input("Enter the first number: ") 
+input2 = input("Enter the second number: ")
+
+num1 = safe_int(input1) 
+num2 = safe_int(input2)
+
+if num1 is not None and num2 is not None: 
+    total_sum = num1 + num2 
+    print(f"The sum of the numbers is: {total_sum}") 
+else: print("Oops! One or both of your inputs were not valid numbers. Please try again.")

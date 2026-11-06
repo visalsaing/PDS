@@ -1,0 +1,46 @@
+print('\nA. Compute hours, minutes and seconds')
+
+total_seconds = 9875 
+hours = (total_seconds // 3600)
+remain_min = total_seconds % 3600
+minute = remain_min // 60
+second = remain_min % 60
+print(f"{hours} h - {minute} m - {second} s")
+
+print('\nB. Rebuild the total from the three parts and print whether it equals')
+
+hour = 2
+minutes = 44
+seconds = 35
+
+total_second1 = hour * 3600
+total_second2 = minutes * 60
+total_second = total_second1 + total_second2 + seconds
+
+print('Total second: ', total_second ,'seconds')
+
+print('\nC. Test your code with 3600, 59 and 86399 seconds.')
+
+#for 3600 seconds
+total_seconds = 3600 
+hours = (total_seconds // 3600)
+remain_min = total_seconds % 3600
+minute = remain_min // 60
+second = remain_min % 60
+print(f"{hours} h - {minute} m - {second} s\n")
+
+#59 seconds
+total_seconds = 59
+hours = (total_seconds // 3600)
+remain_min = total_seconds % 3600
+minute = remain_min // 60
+second = remain_min % 60
+print(f"{hours} h - {minute} m - {second} s\n")
+
+#86399 seconds
+total_seconds = 86399
+hours = (total_seconds // 3600)
+remain_min = total_seconds % 3600
+minute = remain_min // 60
+second = remain_min % 60
+print(f"{hours} h - {minute} m - {second} s\n")
